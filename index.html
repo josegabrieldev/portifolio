@@ -8,7 +8,14 @@
 </head>
 <body>
     <header>
-        <nav>
+        <div class="logo">
+            <h1>José Gabriel</h1>
+            <p>DESENVOLVEDOR WEB</p>
+        </div>
+
+        <button id="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+
+        <nav id="menu">
             <ul>
                 <li><a href="./pages/sobre.html">Sobre Mim</a></li>
                 <li><a href="./pages/curriculo.html">Currículo</a></li>
@@ -22,8 +29,9 @@
         <!--Conteúdo que será carregado via SPA com JavaScript-->
     </main>
 
-    <footer>
+    <footer class="assinatura">
         <p>&copy; 2025 José Gabriel</p>
+        <code id="assinatura"></code>
     </footer>
 
     <script src="js/app.js"></script>
