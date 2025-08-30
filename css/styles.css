@@ -34,22 +34,43 @@ header {
   background: var(--cor-fundo);
   color: var(--cor-texto-claro);
   padding: 1.5rem 1.8em;
+  border-bottom: 2px solid var(--cor-secundaria);
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
 }
 
-header h1 {
-  font-family: var(--fonte-titulos);
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
+div.branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
 }
 
-header p {
-  font-size: 1rem;
-  letter-spacing: 2px;
+.logo-img {
+  width: 100px;
+  height: auto;
+  transition:  transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+.nome-dev h1 {
+  font-family: var(--fonte-titulos);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.nome-dev p {
+  font-size: 0.95rem;
+  letter-spacing: 1px;
   font-weight: 300;
+  margin: 0;
 }
 
 header #menu-toggle {
@@ -167,11 +188,16 @@ footer code#assinatura {
   white-space: normal;
   word-break: break-word;
   overflow: hidden;
-  border-right: 2px solid var(--cor-secundaria);
-  text-shadow: 0 0 5px rgba(0, 221, 0, 0.459);
   box-sizing: border-box;
-  animation: blink-caret 0.75s step-end infinite;
   transition: border-right 0.2s ease-in-out;
+  transition: text-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.8s steps(2, start) infinite;
+  color: var(--cor-secundaria);
+  font-weight: bold;
 }
 
 @keyframes blink-caret {
@@ -186,12 +212,13 @@ footer code#assinatura {
   }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
 @keyframes fadeIn {
   from { opacity: 0 }
   to { opacity: 1 }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
 }

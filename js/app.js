@@ -15,26 +15,31 @@ toggleBtn.addEventListener('click', () => {
 // Efeito de digitação no Rodapé
 const texto = 'const DevGabriel = () => "Compilando ideias, executando sonhos"'
 const elemento = document.getElementById('assinatura')
+const cursor = document.getElementById('cursor')
 let i = 0
 
-function digitar() {
-    if(i < texto.length) {
-        elemento.textContent += texto.charAt(i)
+function digitarFrase() {
+    if (i < texto.length) {
+        cursor.insertAdjacentText('beforebegin', texto.charAt(i))
+        tocarSom()
         i++
-        setTimeout(digitar, 100)
-    } else {
-        // Após digitar tudo, para o cursor por 2 minutos
-        setTimeout(() => {
-        elemento.style.borderRight = 'none'; // para o cursor
-        // Após 2 minutos, reativa o cursor e apaga o texto
-        setTimeout(() => {
-        elemento.style.borderRight = '2px solid var(--cor-secundaria)';
-        elemento.textContent = '';
-        i = 0;
-            // Após 5 segundos, começa a digitar novamente
-        setTimeout(digitar, 5000);
-        }, 120000); // 2 minutos
-        }, 1000); // pequena pausa antes de parar o cursor
+        setTimeout(digitarFrase, 100)
     }
 }
-digitar()
+
+function tocarSom() {
+    const audio = new Audio('assets/sounds/keyboard-typing.mp3')
+    audio.volume = 0.2
+    audio.play().catch(e => {
+        console.warn("Som bloqueado ou falhou:", e)
+    })
+}
+
+window.addEventListener('click', () => {
+    if (elemento.textContent.trim() === '|') {
+        digitarFrase()
+        setTimeout(() => {
+            cursor.style.display = 'none'
+        }, 30000)
+    }
+}, { once: true })
