@@ -1,15 +1,10 @@
 // Botão de menu Hamburguer
-const toggleBtn = document.querySelector('button#menu-toggle')
+const menuToggle = document.querySelector('button#menu-toggle')
 const menu = document.querySelector('nav#menu')
 
-toggleBtn.addEventListener('click', () => {
+menuToggle.addEventListener('click', () => {
     menu.classList.toggle('active')
-
-    if(menu.classList.contains('active')) {
-        toggleBtn.innerHTML = "&times"
-    } else {
-        toggleBtn.innerHTML = "&#9776;"
-    }
+    menuToggle.textContent = menu.classList.contains("active") ? "✖" : "☰"
 })
 
 // Efeito de digitação no Rodapé
