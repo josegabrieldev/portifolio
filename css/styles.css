@@ -29,6 +29,7 @@ body {
   flex-direction: column;
 }
 
+    /*Cabeçalho*/
 header {
   width: 100%;
   background: var(--cor-fundo);
@@ -153,6 +154,7 @@ nav.active {
   transform: translateX(0);
 }
 
+    /*Conteúdo Principal*/
 main {
   flex: 1;
   padding: 1.5rem;
@@ -161,13 +163,15 @@ main {
   animation: fadeIn 1s ease-in;
 }
 
+    /*Rodapé*/
 footer.assinatura {
-  background-color: var(--cor-preto);
+  background: linear-gradient(to top, #0D0D0D, transparent);
   color: var(--cor-texto-claro);
   font-family: var(--fonte-texto);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-align: center;
-  padding: 1.2rem 0.5rem;
+  line-height: 1.4rem;
+  padding: 1rem 0.5rem;
   border-top: 2px solid var(--cor-secundaria);
   opacity: 1;
 }
@@ -194,8 +198,10 @@ footer code#assinatura {
   animation: blink 0.8s steps(2, start) infinite;
   color: var(--cor-secundaria);
   font-weight: bold;
+  text-shadow: 0 0 6px var(--cor-secundaria);
 }
 
+    /*Efeitos e Animações*/
 @keyframes blink-caret {
   from, to { border-color: transparent; }
   50% { border-color: var(--cor-secundaria); }
