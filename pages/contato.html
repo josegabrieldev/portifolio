@@ -1,63 +1,53 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Contato | Portfólio Dev Gabriel </title>
-</head>
-<body>
-    <main>
-        <section>
-            <h1>Entre em Contato</h1>
-            <p>Gosto de construir interfaces modernas, acessíveis e responsivas. Se você tem um projeto ou ideia, vamos conversar!</p>
+<main>
+    <section>
+        <h1>Entre em Contato</h1>
+        <p>Gosto de construir interfaces modernas, acessíveis e responsivas. Se você tem um projeto ou ideia, vamos conversar!</p>
+
+        <div class="bloco">
+            <h2>Envie uma mensagem</h2>
+            <p>Seus dados serão usados apenas para responder sua mensagem.</p>
+            <form action="https://formspree.io/f/mwpqgyvz" method="post">
+
+                <label for="nome-completo">Nome Completo *</label>
+                <input type="text" id="nome-completo" name="nome-completo" placeholder="Seu nome" required>
+
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa...Ex.: objetivo, prazo e referências." required></textarea>
+
+                <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_next" value="https://josegabrieldev.github.io/obrigado.html">
+
+                <input type="submit" value="Enviar Mensagem">
+                <p>* Campos obrigatórios</p>
+            </form>
+        </div>
 
             <div class="bloco">
-                <h2>Envie uma mensagem</h2>
-                <p>Seus dados serão usados apenas para responder sua mensagem.</p>
-                <form action="https://formspree.io/f/mwpqgyvz" method="post">
-
-                    <label for="nome-completo">Nome Completo *</label>
-                    <input type="text" id="nome-completo" name="nome-completo" placeholder="Seu nome" required>
-
-                    <label for="email">E-mail *</label>
-                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
-
-                    <label for="mensagem">Mensagem *</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa...Ex.: objetivo, prazo e referências." required></textarea>
-
-                    <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://josegabrieldev.github.io/obrigado.html">
-
-                    <input type="submit" value="Enviar Mensagem">
-                    <p>* Campos obrigatórios</p>
-                </form>
+                <h2>Falar no WhatsApp</h2>
+                <p>Prefere WhatsApp? Clique abaixo e me chame diretamente — respondo o quanto antes.</p>
+                <a href="https://wa.me/5583996860603?text=Ol%C3%A1%2C%20Jos%C3%A9%20Gabriel!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20front-end.%20Podemos%20marcar%20uma%20conversa%20r%C3%A1pida%3F" target="_blank">Abrir WhatsApp</a>
             </div>
-
-                <div class="bloco">
-                    <h2>Falar no WhatsApp</h2>
-                    <p>Prefere WhatsApp? Clique abaixo e me chame diretamente — respondo o quanto antes.</p>
-                    <a href="https://wa.me/5583996860603?text=Ol%C3%A1%2C%20Jos%C3%A9%20Gabriel!%20Vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20falar%20sobre%20um%20projeto%20front-end.%20Podemos%20marcar%20uma%20conversa%20r%C3%A1pida%3F" target="_blank">Abrir WhatsApp</a>
-                </div>
-
-                <div class="bloco">
-                    <h2>Enviar um E-mail</h2>
-                    <p>Prefere e-mail? Me envie uma mensagem e eu retorno com possíveis caminhos e prazos.</p>
-                    <a href="mailto:josegabriel.webdev@gmail.com?subject=Contato%20via%20Portf%C3%B3lio&body=Ol%C3%A1%2C%20Jos%C3%A9%20Gabriel!%0D%0A%0D%0AVi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0A%E2%80%A2%20Empresa%2FCliente%3A%0D%0A%E2%80%A2%20Escopo%20resumido%3A%0D%0A%E2%80%A2%20Prazo%20estimado%3A%0D%0A%E2%80%A2%20Or%C3%A7amento%20(aprox.)%3A%0D%0A%0D%0AObrigado!" target="_blank">Enviar E-mail</a>
-                </div>
 
             <div class="bloco">
-                <h2>Minhas Redes</h2>
-                <p>você também pode me encontrar nas redes profissionais:</p>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/josegabrieldev/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/josegabrieldev" target="_blank">GitHub</a></li>
-                </ul>
-                <p>Gosto de trocar ideias e compartilhar conhecimento.
-                Se conecte comigo e vamos construir algo juntos!</p>
+                <h2>Enviar um E-mail</h2>
+                <p>Prefere e-mail? Me envie uma mensagem e eu retorno com possíveis caminhos e prazos.</p>
+                <a href="mailto:josegabriel.webdev@gmail.com?subject=Contato%20via%20Portf%C3%B3lio&body=Ol%C3%A1%2C%20Jos%C3%A9%20Gabriel!%0D%0A%0D%0AVi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto.%0D%0A%0D%0A%E2%80%A2%20Empresa%2FCliente%3A%0D%0A%E2%80%A2%20Escopo%20resumido%3A%0D%0A%E2%80%A2%20Prazo%20estimado%3A%0D%0A%E2%80%A2%20Or%C3%A7amento%20(aprox.)%3A%0D%0A%0D%0AObrigado!" target="_blank">Enviar E-mail</a>
             </div>
-        </section>
-    </main>
-</body>
-</html>
+
+        <div class="bloco">
+            <h2>Minhas Redes</h2>
+            <p>você também pode me encontrar nas redes profissionais:</p>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/josegabrieldev/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/josegabrieldev" target="_blank">GitHub</a></li>
+            </ul>
+            <p>Gosto de trocar ideias e compartilhar conhecimento.
+            Se conecte comigo e vamos construir algo juntos!</p>
+        </div>
+    </section>
+</main>
