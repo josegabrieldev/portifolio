@@ -18,7 +18,7 @@
 
         <button id="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
 
-        <nav id="menu">
+        <nav id="menu" aria-label="Menu Principal">
             <ul>
                 <li><a href="./pages/sobre.html">Sobre Mim</a></li>
                 <li><a href="./pages/curriculo.html">Currículo</a></li>
@@ -31,6 +31,12 @@
     <main id="main-content">
         <!--Conteúdo que será carregado via SPA com JavaScript-->
     </main>
+
+    <!-- overlay de loading -->
+    <div id="loader" class="loader hidden" aria-hidden="true" role="status" aria-label="Carregando">
+        <div class="spinner" aria-hidden="true"></div>
+        <p>Carregando...</p>
+    </div>
 
     <footer class="assinatura">
         <p>&copy; 2025 <br> Todos os direitos reservados a José Gabriel</p>
