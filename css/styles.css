@@ -159,9 +159,8 @@ nav a.active::after {
 /* ---------- Main ---------- */
 #main-content {
   flex: 1;
-  max-width: 900px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: .8rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -281,4 +280,57 @@ footer code#assinatura {
 @keyframes glow {
   0%,100% { box-shadow: 0 0 8px #00ffc8, 0 0 16px #00ffc8; }
   50% { box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8; }
+}
+
+/* ================== PÁGINA SOBRE ================== */
+main.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: .8em;
+}
+
+main.sobre section {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .8rem;
+}
+
+main.sobre h1 {
+  display: block;
+  width: fit-content;
+  background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
+  color: var(--cor-primaria);
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0.4rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  text-shadow: 0 0 4px var(--cor-primaria);
+}
+
+main.sobre h2 {
+  display: block;
+  width: fit-content;
+  background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
+  color: var(--cor-secundaria);
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding: .3rem 1.2rem;
+  margin: 1rem 0;
+  border-radius: 0.3rem;
+  text-shadow: 0 0 4px var(--cor-secundaria);
+}
+
+main.sobre p {
+  text-align: justify;
+  line-height: 1.6rem;
+  font-size: 0.9rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 1.5rem;
 }
