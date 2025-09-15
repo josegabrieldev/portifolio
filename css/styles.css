@@ -73,7 +73,7 @@ header {
 /* ---------- Menu Hamburger ---------- */
 #menu-toggle {
   background: none;
-  color: var(--cor-texto-claro);
+  color: #00ffc8;
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
@@ -220,7 +220,7 @@ nav a.active::after {
 footer.assinatura {
   background: linear-gradient(to top, #0D0D0D, transparent);
   font-family: var(--fonte-texto);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   text-align: center;
   padding: 1rem 0.5rem;
   border-top: 2px solid var(--cor-secundaria);
@@ -231,7 +231,7 @@ footer code#assinatura {
   max-width: 100%;
   min-height: 1.5em;
   font-family: var(--fonte-texto), monospace;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: white;
   text-align: center;
   padding: 0.5rem;
@@ -282,6 +282,13 @@ footer code#assinatura {
   50% { box-shadow: 0 0 20px #00ffc8, 0 0 40px #00ffc8; }
 }
 
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ================== PÁGINA SOBRE ================== */
 main.sobre {
   display: flex;
@@ -305,12 +312,17 @@ main.sobre h1 {
   width: fit-content;
   background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
   color: var(--cor-primaria);
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: bold;
   padding: 0.4rem 1.5rem;
   margin: 1rem 0;
   border-radius: 0.3rem;
   text-shadow: 0 0 4px var(--cor-primaria);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp .6s ease forwards;
+  animation-delay: .2s;
 }
 
 main.sobre h2 {
@@ -318,19 +330,36 @@ main.sobre h2 {
   width: fit-content;
   background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
   color: var(--cor-secundaria);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: bold;
   text-align: center;
   padding: .3rem 1.2rem;
   margin: 1rem 0;
   border-radius: 0.3rem;
   text-shadow: 0 0 4px var(--cor-secundaria);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp .6s ease forwards;
 }
 
 main.sobre p {
   text-align: justify;
   line-height: 1.6rem;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--cor-texto-claro);
   margin-bottom: 1.5rem;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp .6s ease forwards;
 }
+
+/* ---------- Delay progressivo ---------- */
+main.sobre h2 { animation-delay: .5s; }
+main.sobre p:nth-of-type(1) { animation-delay: .4s; }
+main.sobre p:nth-of-type(2) { animation-delay: .7s; }
+
+/* ================== PÁGINA CURRÍCULO ================== */
+
+/* ================== PÁGINA PROJETOS ================== */
