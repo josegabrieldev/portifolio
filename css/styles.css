@@ -317,7 +317,7 @@ main.sobre h1 {
   padding: 0.4rem 1.5rem;
   margin: 1rem 0;
   border-radius: 0.3rem;
-  text-shadow: 0 0 4px var(--cor-primaria);
+  text-shadow: 0 0 2px var(--cor-primaria);
 
   opacity: 0;
   transform: translateY(20px);
@@ -336,7 +336,7 @@ main.sobre h2 {
   padding: .3rem 1.2rem;
   margin: 1rem 0;
   border-radius: 0.3rem;
-  text-shadow: 0 0 4px var(--cor-secundaria);
+  text-shadow: 0 0 2px var(--cor-secundaria);
 
   opacity: 0;
   transform: translateY(20px);
@@ -356,10 +356,133 @@ main.sobre p {
 }
 
 /* ---------- Delay progressivo ---------- */
-main.sobre h2 { animation-delay: .5s; }
-main.sobre p:nth-of-type(1) { animation-delay: .4s; }
+main.sobre h2 { animation-delay: .4s; }
+main.sobre p:nth-of-type(1) { animation-delay: .5s; }
 main.sobre p:nth-of-type(2) { animation-delay: .7s; }
 
 /* ================== PÁGINA CURRÍCULO ================== */
+main.curriculo {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+main.curriculo section {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.082);
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+main.curriculo section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+}
+
+main.curriculo h1 {
+  color: var(--cor-secundaria);
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+main.curriculo h1 i {
+  color: var(--cor-primaria);
+  font-size: 1.7rem;
+}
+
+main.curriculo h2 {
+  color: var(--cor-primaria);
+  font-family: var(--fonte-titulos);
+  font-size: 1.5rem;
+  padding-left: .6rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+main.curriculo h2 i {
+  color: var(--cor-secundaria);
+}
+
+main.curriculo p, 
+main.curriculo li {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  color: var(--cor-texto-claro);
+  margin-bottom: 0.6rem;
+}
+
+main.curriculo ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+main.curriculo ul li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: .4rem;
+  transition: color 0.3s ease;
+}
+
+main.curriculo ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #27ae77;
+  font-weight: bold;
+}
+
+main.curriculo ul li:hover {
+  color: var(--cor-secundaria);
+}
+
+main.curriculo .btn-download {
+  width: 100%;
+  display: inline-block;
+  margin: 1rem auto 0 auto;
+  padding: 0.9rem 1.8rem;
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+main.curriculo .btn-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+}
+
+main.curriculo section:nth-of-type(1) { animation-delay: .3s; }
+main.curriculo section:nth-of-type(2) { animation-delay: .6s; }
+main.curriculo section:nth-of-type(3) { animation-delay: .9s; }
+main.curriculo section:nth-of-type(4) { animation-delay: 1.2s; }
+main.curriculo section:nth-of-type(5) { animation-delay: 1.5s; }
+main.curriculo .btn-download { animation-delay: 1.8s; }
 
 /* ================== PÁGINA PROJETOS ================== */
