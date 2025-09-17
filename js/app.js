@@ -9,7 +9,7 @@ menuToggle.addEventListener('click', () => {
 })
 
 // ==================== EFEITO DIGITAÇÃO RODAPÉ ====================
-const texto = 'const DevGabriel = () => "Compilando ideias, executando sonhos"'
+const texto = 'const DevGabriel = () => "Criando hoje as interfaces do amanhã"'
 const elemento = document.getElementById('assinatura')
 const cursor = document.getElementById('cursor')
 let i = 0

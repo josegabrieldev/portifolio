@@ -291,74 +291,101 @@ footer code#assinatura {
 
 /* ================== PÁGINA SOBRE ================== */
 main.sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  padding: .8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
 }
 
-main.sobre section {
-  width: 100%;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .8rem;
+main.sobre .perfil {
+    width: 100%;
+    max-width: 800px;
+    background-color: #2575fc;
+    padding: 2rem 1rem;
+    margin: 1rem 0 2rem 0;
+    text-align: center;
+    border-radius: 2px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-main.sobre h1 {
-  display: block;
-  width: fit-content;
-  background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
-  color: var(--cor-primaria);
-  font-size: 1.9rem;
-  font-weight: bold;
-  padding: 0.4rem 1.5rem;
-  margin: 1rem 0;
-  border-radius: 0.3rem;
-  text-shadow: 0 0 2px var(--cor-primaria);
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp .6s ease forwards;
-  animation-delay: .2s;
+main.sobre .foto-perfil {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
 }
 
-main.sobre h2 {
-  display: block;
-  width: fit-content;
-  background-image: linear-gradient(to right, var(--cor-fundo), var(--cor-preto), transparent);
-  color: var(--cor-secundaria);
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-align: center;
-  padding: .3rem 1.2rem;
-  margin: 1rem 0;
-  border-radius: 0.3rem;
-  text-shadow: 0 0 2px var(--cor-secundaria);
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp .6s ease forwards;
+main.sobre .perfil h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bolder;
+    margin: 0.6rem 0;
 }
 
-main.sobre p {
-  text-align: justify;
-  line-height: 1.6rem;
-  font-size: 1rem;
-  color: var(--cor-texto-claro);
-  margin-bottom: 1.5rem;
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp .6s ease forwards;
+main.sobre .perfil hr {
+    width: 100px;
+    border: 1px solid var(--cor-secundaria);
+    margin: 0.5rem auto 1rem;
 }
 
-/* ---------- Delay progressivo ---------- */
-main.sobre h2 { animation-delay: .4s; }
-main.sobre p:nth-of-type(1) { animation-delay: .5s; }
-main.sobre p:nth-of-type(2) { animation-delay: .7s; }
+main.sobre .redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+main.sobre .redes-sociais a {
+    font-size: 1.2rem;
+    color: #000;
+    transition: transform 0.2s;
+}
+
+.redes-sociais a:hover {
+    transform: scale(1.2);
+}
+
+/* Seção boas-vindas */
+.boas-vindas {
+    padding: 2rem 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    width: 100%;
+}
+
+main.sobre .boas-vindas h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+main.sobre .botoes {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main.sobre .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+main.sobre .btn:hover {
+    background: white;
+    color: #2575fc;
+}
+
+main.sobre .descricao {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
 
 /* ================== PÁGINA CURRÍCULO ================== */
 main.curriculo {
