@@ -165,6 +165,17 @@ links.forEach(link => {
     })
 })
 
+// ----------------- Clique nos botões de boas-vindas -----------------
+const botoesBoasVindas = document.querySelectorAll('.boas-vindas .botoes a')
+
+botoesBoasVindas.forEach(botao => {
+    botao.addEventListener('click', e => {
+        e.preventDefault()
+        const pagina = botao.getAttribute('href').replace('#', '')
+        navegar(pagina)
+    })
+})
+
 // ----------------- Voltar / Avançar navegador -----------------
 window.addEventListener('hashchange', () => {
     const pagina = location.hash.substring(1) || paginaInicial

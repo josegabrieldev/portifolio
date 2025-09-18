@@ -160,7 +160,7 @@ nav a.active::after {
 #main-content {
   flex: 1;
   margin: 0 auto;
-  padding: .8rem;
+  padding: 0.8rem;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.35s ease, transform 0.35s ease;
@@ -218,7 +218,7 @@ nav a.active::after {
 
 /* ---------- Rodapé ---------- */
 footer.assinatura {
-  background: linear-gradient(to top, #0D0D0D, transparent);
+  background: linear-gradient(to top, var(--cor-fundo), var(--cor-preto));
   font-family: var(--fonte-texto);
   font-size: 0.8rem;
   text-align: center;
@@ -291,21 +291,26 @@ footer code#assinatura {
 
 /* ================== PÁGINA SOBRE ================== */
 main.sobre {
+    width: 100%;
+    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--fonte-texto);
 }
 
 main.sobre .perfil {
     width: 100%;
-    max-width: 800px;
     background-color: #2575fc;
     padding: 2rem 1rem;
-    margin: 1rem 0 2rem 0;
+    margin: 1rem auto;
     text-align: center;
     border-radius: 2px 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 0.8s ease forwards;
 }
 
 main.sobre .foto-perfil {
@@ -317,9 +322,10 @@ main.sobre .foto-perfil {
 }
 
 main.sobre .perfil h1 {
+  font-family: var(--fonte-titulos);
     color: white;
     font-size: 2rem;
-    font-weight: bolder;
+    font-weight: bold;
     margin: 0.6rem 0;
 }
 
@@ -330,33 +336,48 @@ main.sobre .perfil hr {
 }
 
 main.sobre .redes-sociais {
+    background-color: #ffffff;
+    margin: 1rem -1rem;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 1rem;
 }
 
 main.sobre .redes-sociais a {
-    font-size: 1.2rem;
-    color: #000;
-    transition: transform 0.2s;
+    font-size: 2rem;
+    color: var(--cor-secundaria);
+    transition: transform 0.2s ease;
 }
 
-.redes-sociais a:hover {
-    transform: scale(1.2);
+main.sobre .redes-sociais a:hover {
+    transform: scale(1.3);
 }
 
-/* Seção boas-vindas */
-.boas-vindas {
-    padding: 2rem 1rem;
-    text-align: center;
+main.sobre .boas-vindas {
+    width: 100%;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
-    width: 100%;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 2px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeSlideUp 0.8s ease forwards;
 }
 
 main.sobre .boas-vindas h2 {
     font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-fundo);
     margin-bottom: 0.5rem;
+    text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 main.sobre .botoes {
@@ -374,23 +395,29 @@ main.sobre .btn {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-main.sobre .btn:hover {
-    background: white;
-    color: #2575fc;
+main.sobre .btn:active {
+    background: var(--cor-fundo);
+    color: #00ffc8;
+    border: 2px solid var(--cor-secundaria);
+    transform: scale(1.2);
 }
 
 main.sobre .descricao {
-    font-size: 0.95rem;
+    font-size: 1rem;
     margin-top: 1rem;
 }
+
+main.sobre > section:nth-child(1) { animation-delay: 0.3s; }
+main.sobre > section:nth-child(2) { animation-delay: 0.6s; }
 
 /* ================== PÁGINA CURRÍCULO ================== */
 main.curriculo {
   width: 100%;
   max-width: 800px;
+  font-family: var(--fonte-texto);
   display: flex;
   flex-direction: column;
   align-items: center;
