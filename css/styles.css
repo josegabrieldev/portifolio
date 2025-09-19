@@ -540,3 +540,120 @@ main.curriculo section:nth-of-type(5) { animation-delay: 1.5s; }
 main.curriculo .btn-download { animation-delay: 1.8s; }
 
 /* ================== PÁGINA PROJETOS ================== */
+main.projetos {
+  width: 100%;
+  max-width: 800px;
+  font-family: var(--fonte-texto);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 1.2rem;
+}
+
+main.projetos section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+main.projetos h1 {
+  font-family: var(--fonte-titulos);
+  color: var(--cor-secundaria);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .2rem;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideUp 0.8s ease forwards;
+}
+
+main.projetos .card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease-in-out;
+
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeSlideUp 0.8s ease forwards;
+}
+
+main.projetos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3)
+}
+
+main.projetos .card-texto {
+    padding: 1rem;
+}
+
+main.projetos .card-texto h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #0A1F44;
+    border-left: 5px solid var(--cor-primaria);
+    padding-left: 8px;
+    margin-bottom: 0.5rem;
+}
+
+main.projetos .card-texto p {
+    text-indent: 20px;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+main.projetos .card-texto a {
+    width: 80%;
+    display: block;
+    padding: 0.6rem 1rem;
+    margin: 0 auto;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-fundo));
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+main.projetos .card-texto a:hover {
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+main.projetos .card-texto a:focus {
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+main.projetos .card-texto a:active {
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+main.projetos .card-imagem img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+main.projetos .card:hover .card-imagem img {
+  transform: scale(1.02);
+}
+
+main.projetos h1 { animation-delay: 0.3s; }
+main.projetos section .card:nth-child(1) { animation-delay: 0.6s; }
+main.projetos section .card:nth-child(2) { animation-delay: 0.9s; }
+main.projetos section .card:nth-child(3) { animation-delay: 1.2s; }
