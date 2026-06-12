@@ -1,49 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfólio Dev Gabriel </title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://kit.fontawesome.com/274ffe0712.js" crossorigin="anonymous"></script>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | José Gabriel da Silva</title>
+    <meta property="og:title" content="Portfólio | José Gabriel da Silva" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/274ffe0712.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <header>
-        <div class="branding">
-            <img src="assets/images/logo-celular.png" alt="Logo Dev Gabriel" class="logo-img" width="50px">
-            <div class="nome-dev">
-                <h1>José Gabriel</h1>
-                <p>DESENVOLVEDOR WEB</p>
-            </div>
+      <div class="branding">
+        <img
+          src="assets/images/logo-celular.png"
+          alt="Logo Dev Gabriel"
+          class="logo-img"
+          width="50px"
+        />
+        <div class="nome-dev">
+          <h1>José Gabriel</h1>
+          <p>DESENVOLVEDOR WEB</p>
         </div>
+      </div>
 
-        <button id="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+      <button id="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
 
-        <nav id="menu" aria-label="Menu Principal">
-            <ul>
-                <li><a href="./pages/sobre.html">Sobre Mim</a></li>
-                <li><a href="./pages/curriculo.html">Currículo</a></li>
-                <li><a href="./pages/projetos.html">Projetos</a></li>
-                <li><a href="./pages/contato.html">Contato</a></li>
-            </ul>
-        </nav>
+      <nav id="menu" aria-label="Menu Principal">
+        <ul>
+          <li><a href="./pages/sobre.html">Sobre Mim</a></li>
+          <li><a href="./pages/curriculo.html">Currículo</a></li>
+          <li><a href="./pages/projetos.html">Projetos</a></li>
+          <li><a href="./pages/contato.html">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main id="main-content">
-        <!--Conteúdo que será carregado via SPA com JavaScript-->
+      <!--Conteúdo que será carregado via SPA com JavaScript-->
     </main>
 
     <!-- overlay de loading -->
-    <div id="loader" class="loader hidden" aria-hidden="true" role="status" aria-label="Carregando">
-        <div class="spinner" aria-hidden="true"></div>
-        <p>Carregando...</p>
+    <div
+      id="loader"
+      class="loader hidden"
+      aria-hidden="true"
+      role="status"
+      aria-label="Carregando"
+    >
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Carregando...</p>
     </div>
 
     <footer class="assinatura">
-        <p>&copy; 2025 <br> Todos os direitos reservados a José Gabriel</p>
-        <code id="assinatura"> <span id="cursor">|</span> </code>
+      <p>
+        &copy; 2025 <br />
+        Todos os direitos reservados a José Gabriel
+      </p>
+      <code id="assinatura"> <span id="cursor">|</span> </code>
     </footer>
 
     <script src="js/app.js"></script>
-</body>
+  </body>
 </html>
