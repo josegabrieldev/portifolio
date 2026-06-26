@@ -51,8 +51,8 @@ O portfólio é dividido nas seguintes páginas:
 ---
 
 ## 📬 Contato
-- **Telefone:** +55 (83) 99686-0603  
-- **E-mail:** devgabrielsilva21@gmail.com  
+- **Telefone:** +55 (83) 986040633  
+- **E-mail:** josegabriel.webdev@gmail.com  
 - **LinkedIn:** [linkedin.com/in/josegabrieldev](https://www.linkedin.com/in/josegabrieldev/)  
 - **GitHub:** [github.com/josegabrieldev](https://github.com/josegabrieldev)  
 
