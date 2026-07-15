@@ -62,6 +62,33 @@
       <code id="assinatura"> <span id="cursor">|</span> </code>
     </footer>
 
+    <div class="overlay-backdrop overlay-oculto" id="overlay-backdrop">
+      <div class="overlay-card" id="overlay-card">
+        <button
+          class="botao-fechar"
+          id="btn-fechar-x"
+          aria-label="Fechar aviso"
+        ></button>
+        <h3>
+          <span class="overlay-titulo" id="overlay-titulo"></span>
+          <span class="overlay-bolinha"></span>
+        </h3>
+        <p class="overlay-mensagem" id="overlay-mensagem"></p>
+        <div class="overlay-botoes">
+          <button class="btn-fechar-overlay" id="btn-fechar-overlay">
+            Fechar
+          </button>
+          <button
+            class="tentar-novamente-overlay"
+            id="tentar-novamente-overlay"
+          >
+            Tentar Novamente
+          </button>
+        </div>
+        <span class="overlay-contador" id="overlay-contador"></span>
+      </div>
+    </div>
+
     <script src="js/app.js"></script>
   </body>
 </html>
