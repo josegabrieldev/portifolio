@@ -6,11 +6,14 @@
 
 /* ---------- Variáveis ---------- */
 :root {
-  --cor-primaria: #6E37A6;
-  --cor-secundaria: #00dd00dd;
+  --cor-primaria: #7334b3;
+  --cor-secundaria: #00dd00;
   --cor-fundo: #1C1240;
   --cor-texto-claro: #f5f5f5ec;
   --cor-preto: #0D0D0D;
+  --cor-branco: #FFFFFF;
+  --cor-neutra: #584486;
+  --cor-focus: #3B82F6;
   --cor-backdrop-overlay-opaco: rgba(28, 18, 64, 0.88);
   --cor-backdrop-overlay-semi: rgba(28, 18, 64, 0.68);
   --fonte-titulos: 'Poppins', sans-serif;
@@ -26,6 +29,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:focus-visible {
+  outline: 2px solid var(--cor-focus);
+  outline-offset: 3px;
 }
 
 /* ---------- Body ---------- */
@@ -94,6 +102,127 @@ header {
   justify-content: center;
   background-color: var(--cor-backdrop-overlay-opaco);
   z-index: var(--z-overlay);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-oculto {
+  display: none;
+}
+
+.overlay-visivel {
+  opacity: 1;
+}
+
+.overlay-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  width: 90%;
+  max-width: 600px;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto-claro);
+  padding: 2em;
+  border-radius: 10px;
+  overflow: visible;
+  position: relative;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.507);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.overlay-visivel .overlay-card {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.overlay-btn-fechar-x {
+  position: absolute;
+  top: 0.3em;
+  right: 0.3em;
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  color: var(--cor-branco);
+  font-size: 1.3em;
+  padding: 0.3em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay-btn-fechar-x:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-fundo);
+}
+
+.overlay-btn-fechar-x:active {
+  transform: scale(0.95) translateY(-2px);
+}
+
+.overlay-card h3 {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3em;
+}
+
+.overlay-bolinha {
+  width: 25px;
+  height: 25px;
+  background-color: var(--cor-secundaria);
+  border-radius: 50%;
+}
+
+.overlay-mensagem {
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.overlay-botoes {
+  display: flex;
+  gap: 1em;
+}
+
+.overlay-botoes button {
+  font-weight: bolder;
+  letter-spacing: 1px;
+  padding: 0.8em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.overlay-botoes button:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-fundo);
+  transform: translateY(-2px);
+}
+
+.overlay-botoes button:active {
+  transform: scale(0.97) translateY(2px); 
+}
+
+.btn-fechar-overlay {
+  background-color: var(--cor-neutra);
+  color: var(--cor-texto-claro);
+  flex: 1;
+}
+
+.tentar-novamente-overlay {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+  flex: 1;
+}
+
+.overlay-contador {
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  align-self: flex-start;
 }
 
 @supports (backdrop-filter: blur(3px)) {

@@ -62,18 +62,20 @@
       <code id="assinatura"> <span id="cursor">|</span> </code>
     </footer>
 
-    <div class="overlay-backdrop overlay-oculto" id="overlay-backdrop">
+    <div class="overlay-backdrop overlay-visivel" id="overlay-backdrop">
       <div class="overlay-card" id="overlay-card">
         <button
-          class="botao-fechar"
-          id="btn-fechar-x"
+          class="overlay-btn-fechar-x"
+          id="overlay-btn-fechar-x"
           aria-label="Fechar aviso"
-        ></button>
+        >
+        <i class="fa-solid fa-x"></i>
+      </button>
         <h3>
-          <span class="overlay-titulo" id="overlay-titulo"></span>
+          <span class="overlay-titulo" id="overlay-titulo">Sucesso</span>
           <span class="overlay-bolinha"></span>
         </h3>
-        <p class="overlay-mensagem" id="overlay-mensagem"></p>
+        <p class="overlay-mensagem" id="overlay-mensagem">Formulario enviado com sucesso!</p>
         <div class="overlay-botoes">
           <button class="btn-fechar-overlay" id="btn-fechar-overlay">
             Fechar
@@ -85,7 +87,7 @@
             Tentar Novamente
           </button>
         </div>
-        <span class="overlay-contador" id="overlay-contador"></span>
+        <span class="overlay-contador" id="overlay-contador">999</span>
       </div>
     </div>
 
