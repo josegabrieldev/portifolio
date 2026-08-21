@@ -6,26 +6,27 @@
         <div class="form">
             <h2>Envie uma mensagem</h2>
             <p>Seus dados serão usados apenas para responder sua mensagem</p>
-            <form action="https://formspree.io/f/mwpqgyvz" method="post">
-            <fieldset>
-                <legend>Formulário de contato</legend>
-                <label for="nome-completo">Nome Completo *</label>
-                <input type="text" id="nome-completo" name="nome-completo" placeholder="Seu nome" required>
+            <form action="https://formspree.io/f/mwpqgyvz" method="post" id="form-contato">
+                <ul class="form-lista-erro" id="form-lista-erro"></ul>
+                <fieldset>
+                    <legend>Formulário de contato</legend>
+                    <label for="nome">Nome*</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" minlength="2" maxlength="60" required>
 
-                <label for="email">E-mail *</label>
-                <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" minlength="6" maxlength="254" required>
 
-                <label for="mensagem">Mensagem *</label>
-                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa...Ex.: objetivo, prazo e referências." required></textarea>
+                    <label for="mensagem">Mensagem*</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre o que você precisa...Ex.: objetivo, prazo e referências." minlength="10" maxlength="1000" required></textarea>
 
-                <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
-                <input type="hidden" name="_next" value="https://josegabrieldev.github.io/obrigado.html">
+                    <input type="hidden" name="_subject" value="Novo contato via Portfólio!">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://josegabrieldev.github.io/obrigado.html">
 
-                <button type="submit">Enviar Mensagem</button>
-                <p>* Campos obrigatórios</p>
-            </fieldset>
+                    <button type="submit">Enviar Mensagem</button>
+                    <p>* Campos obrigatórios</p>
+                </fieldset>
             </form>
         </div>
 
