@@ -112,6 +112,10 @@ header {
   display: none;
 }
 
+.escondido {
+  display: none;
+}
+
 .overlay-visivel {
   opacity: 1;
 }
@@ -875,7 +879,37 @@ footer code#assinatura {
   font-size: 0.9rem;
   text-align: center;
   color: #aaa;
-  margin-bottom: 1rem;
+}
+
+.contato .form-lista-erro {
+  display: none;
+  background-color: rgba(134, 5, 5, 0.459);
+  list-style-type: none;
+  padding: 0.9em;
+  margin: -1em auto 1.5em auto;
+  border-radius: 10px;
+}
+
+.contato .form-lista-erro:not(:empty) {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.contato .form-lista-erro li {
+  display: flex;
+  padding: 5px;
+  gap: 0.3em;
+}
+
+.contato .form-lista-erro i {
+  font-size: 0.8em;
+  color: var(--cor-erro);
+}
+
+.contato .form-lista-erro span {
+  font-size: 0.8em;
+  color: var(--cor-texto-claro);
 }
 
 .contato .form fieldset {
